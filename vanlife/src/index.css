@@ -1,4 +1,7 @@
 /* Initializations */
+:root {
+  --main-background-color: #FFF7ED;
+}
 * {
   box-sizing: border-box;
 }
@@ -11,7 +14,7 @@ body, h1, h2, h3, h4, h5, h6 {
 nav {
   display: flex;
   align-items: center;
-  background-color: #FFF7ED;
+  background-color: var(--main-background-color);
 }
 @media screen and (max-width: 450px) {
   nav {
@@ -110,7 +113,7 @@ footer {
 }
 .about-container {
   padding: 2rem 1.5rem;
-  background-color:#fffbf5;
+  background-color: var(--main-background-color);
 }
 .about-container p {
   font-size: 0.9rem;
@@ -141,4 +144,8 @@ footer {
 .btn-about-cta:hover {
   background-color: #000;
   border: white solid 2px;
+}
+
+.van-container {
+  background-color: var(--main-background-color);
 }

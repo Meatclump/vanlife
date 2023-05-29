@@ -1,5 +1,7 @@
 export default function Vans() {
     return (
-        <h1>Vans</h1>
+        <div className="van-container">
+            <h1>Explore our van options</h1>
+        </div>
     )
 }
