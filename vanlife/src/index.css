@@ -1,0 +1,119 @@
+/* Initializations */
+* {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Nav styles */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #FFF7ED;
+}
+
+/* Nav title styles */
+nav .page-title {
+  margin-right: auto;
+  padding: 2rem;
+}
+nav .page-title a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Nav item styles */
+nav .nav-items {
+  justify-self: end;
+  padding: 2rem;
+}
+nav .nav-items a {
+  padding-left: 2rem;
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Body styles */
+/* Home */
+.main-home {
+  background-image: url('./assets/image-53.jpg');
+  background-size: cover;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+.main-home p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+.btn-home {
+  background-color: #e7844b;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.4rem;
+  width: 100%;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+/* About */
+.main-about {
+  color: #111;
+}
+.about-img {
+  width: 100%;
+}
+.about-container {
+  padding: 2rem 1.5rem;
+  background-color:#fffbf5;
+}
+.about-container p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+.about-cta {
+  background-color: #ffd59f;
+  padding: 2rem;
+}
+.btn-about-cta {
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.4rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  border: #111 solid 2px;
+  transition: all 0.5s;
+}
+.btn-about-cta:hover {
+  background-color: #000;
+  border: white solid 2px;
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #262626;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem;
+}
