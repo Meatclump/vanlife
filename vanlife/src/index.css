@@ -8,13 +8,13 @@
 body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  background-color: var(--main-background-color);
 }
 
 /* Nav styles */
 nav {
   display: flex;
   align-items: center;
-  background-color: var(--main-background-color);
 }
 @media screen and (max-width: 450px) {
   nav {
@@ -113,7 +113,6 @@ footer {
 }
 .about-container {
   padding: 2rem 1.5rem;
-  background-color: var(--main-background-color);
 }
 .about-container p {
   font-size: 0.9rem;
@@ -147,5 +146,5 @@ footer {
 }
 
 .van-container {
-  background-color: var(--main-background-color);
+  /* background-color: var(--main-background-color); */
 }
