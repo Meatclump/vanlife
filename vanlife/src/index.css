@@ -64,6 +64,15 @@ nav .nav-items a:hover {
   }
 }
 
+
+/* Footer styles */
+footer {
+  background-color: #262626;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem;
+}
+
 /* Body styles */
 /* Home */
 .main-home {
@@ -112,6 +121,8 @@ nav .nav-items a:hover {
 .about-cta {
   background-color: #ffd59f;
   padding: 2rem;
+  margin-top: 2.5rem;
+  border-radius: 0.3rem;
 }
 .btn-about-cta {
   background-color: #111;
@@ -130,13 +141,4 @@ nav .nav-items a:hover {
 .btn-about-cta:hover {
   background-color: #000;
   border: white solid 2px;
-}
-
-
-/* Footer styles */
-footer {
-  background-color: #262626;
-  color: #ccc;
-  text-align: center;
-  padding: 2rem;
 }
