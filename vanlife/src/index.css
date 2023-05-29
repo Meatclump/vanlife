@@ -154,7 +154,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 .van-image-container {
   height: 250px;
@@ -206,4 +206,26 @@ footer {
 }
 .van-type--luxury {
   background-color: #111111;
+}
+.van-type-selector-container {
+  display: flex;
+}
+.van-selector-description {
+  margin-bottom: 0;
+}
+.van-type-selector {
+  padding: 0.8rem 2rem;
+  background-color: #ffd59f;
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+.selected-van-type {
+  background-color: #ffedd6;
+  border: 2px solid black;
 }

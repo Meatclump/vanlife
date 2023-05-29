@@ -15,8 +15,8 @@ export default function Vans() {
         .then(data => setVanArray(data.vans))
     }, [])
 
-    // Set the van elements when our van array updates
-    // Set the van types when the van array updates
+    // Set the vanElements when our van array updates
+    // Set the types when the van array updates
     React.useEffect(() => {
         setVanElements(vanArray.map(van => <Van key={van.id} vanData={van} />))
         let uniqueTypes = []
@@ -28,7 +28,7 @@ export default function Vans() {
         setTypes(uniqueTypes)
     }, [vanArray, selectedType])
 
-    // Update the van elements array when a van type is selected
+    // Update the vanElements when a van type is selected
     React.useEffect(() => {
         setVanElements(vanArray.map(van => {
             if (van.type === selectedType && selectedType !== '') {
@@ -39,12 +39,19 @@ export default function Vans() {
         }))
     }, [selectedType])
 
-    // Set the van type buttons when the available van types update
+    // Set the available typeSelectors when the van types array updates
+    // If the button is the selectedType, set highlighting styles
     React.useEffect(() => {
-        setTypeSelectors(types.map(type => <button key={type} value={type} onClick={changeType}>{type}</button>))
-    }, [types])
+        setTypeSelectors(types.map(type => {
+            let buttonClasses = 'van-type-selector'
+            if (type === selectedType) {
+                buttonClasses += ' selected-van-type'
+            }
+            return <button className={buttonClasses} key={type} value={type} onClick={changeType}>{type}</button>
+        }))
+    }, [types, selectedType])
 
-    // Change the selected type of van for our display filters
+    // Change the selectedType of van for our display filters
     function changeType(event) {
         selectedType === event.target.value ? setSelectedType('') : setSelectedType(event.target.value)
     }
@@ -52,7 +59,12 @@ export default function Vans() {
     return (
         <main className="van-container">
             <h1>Explore our van options</h1>
-            {typeSelectors}
+            <p className='van-selector-description'>
+                Click to select a filter, or click again to de-select it and show all.
+            </p>
+            <div className='van-type-selector-container'>
+                {typeSelectors}
+            </div>
             <div className='van-grid'>
                 {vanElements}
             </div>
