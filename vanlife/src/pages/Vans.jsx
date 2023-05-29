@@ -1,4 +1,5 @@
 import React from 'react'
+import Van from '../components/Van'
 
 export default function Vans() {
     const [vanArray, setVanArray] = React.useState([])
@@ -11,16 +12,14 @@ export default function Vans() {
     }, [])
 
     React.useEffect(() => {
-        setVanElements(vanArray.map(van => <li key={van.id}>{van.name}</li>))
+        setVanElements(vanArray.map(van => <Van key={van.id} vanData={van} />))
     }, [vanArray])
 
 
     return (
         <div className="van-container">
             <h1>Explore our van options</h1>
-            <ul>
             {vanElements}
-            </ul>
         </div>
     )
 }

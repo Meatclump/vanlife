@@ -148,5 +148,5 @@ footer {
 }
 
 .van-container {
-  /* background-color: var(--main-background-color); */
+  padding: 1rem;
 }
