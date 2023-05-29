@@ -50,6 +50,10 @@ nav .nav-items a {
   font-size: 1rem;
   font-weight: 600;
 }
+nav .nav-items a:hover {
+  text-decoration: underline;
+  color: #111;
+}
 @media screen and (max-width: 450px) {
   nav .nav-items {
     text-align: center;
