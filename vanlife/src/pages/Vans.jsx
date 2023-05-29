@@ -1,5 +1,5 @@
 import React from 'react'
-import Van from '../components/Van'
+import Van from '../components/VanThumbnail'
 
 export default function Vans() {
     const [vanArray, setVanArray] = React.useState([])
@@ -17,9 +17,11 @@ export default function Vans() {
 
 
     return (
-        <div className="van-container">
+        <main className="van-container">
             <h1>Explore our van options</h1>
-            {vanElements}
-        </div>
+            <div className='van-grid'>
+                {vanElements}
+            </div>
+        </main>
     )
 }
