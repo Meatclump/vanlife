@@ -4,6 +4,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Vans from './components/Vans'
 import About from './pages/About'
+import './server'
+
 
 function App() {
 
