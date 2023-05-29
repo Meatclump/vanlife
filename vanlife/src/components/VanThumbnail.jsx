@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom'
+
 export default function Van(props) {
-    const {name, imageUrl, price, type} = props.vanData
+    const {name, imageUrl, price, type, id} = props.vanData
     let vanTypeClasses = 'van-type';
 
     if (type) {
@@ -9,7 +11,7 @@ export default function Van(props) {
     return (
         <div className="van">
             <div className="van-image-container">
-                <img src={imageUrl} alt={name} />
+                <Link to={id}><img src={imageUrl} alt={name} /></Link>
             </div>
             <div className="van-details">
                 <div className="van-details-left">
