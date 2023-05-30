@@ -147,6 +147,14 @@ footer {
   border: white solid 2px;
 }
 
+.van-thumbnails a {
+  text-decoration: none;
+  color: #111;
+  transition: 0.5s all;
+}
+.van-thumbnails a:hover {
+  filter: brightness(115%);
+}
 .van-container {
   padding: 1rem;
 }
@@ -227,5 +235,51 @@ footer {
 }
 .selected-van-type {
   background-color: #ffedd6;
+  border: 2px solid black;
+}
+
+/* Van Details page */
+.van-details--container {
+  padding: 1.5rem;
+}
+.van-details--back-button {
+  text-decoration: none;
+  color: #111;
+}
+.van-details--back-button span {
+  text-decoration: underline;
+}
+.van-details--image {
+  max-width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+.van-details--name {
+  margin-top: 1rem;
+}
+.van-details--price {
+  margin-top: 1rem;
+}
+.van-details--price strong {
+  font-size: 1.2rem;
+}
+.van-details--description {
+  margin-top: 1rem;
+}
+.van-details--button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 0.3rem;
+  background-color: #e7844b;
+  border: 2px solid transparent;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.5s;
+}
+.van-details--button:hover {
+  background-color: #ffa46f;
   border: 2px solid black;
 }

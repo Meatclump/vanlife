@@ -9,24 +9,26 @@ export default function Van(props) {
     }
     
     return (
-        <div className="van">
-            <div className="van-image-container">
-                <Link to={id}><img src={imageUrl} alt={name} /></Link>
-            </div>
-            <div className="van-details">
-                <div className="van-details-left">
-                    <h3 className="van-name">{name}</h3>
-                    <span
-                        className={vanTypeClasses}
-                    >
-                        {type}
-                    </span>
+        <div className="van-thumbnails">
+            <Link to={id}>
+                <div className="van-image-container">
+                    <img src={imageUrl} alt={name} />
                 </div>
-                <div className="van-details-right">
-                    <span className="van-price">${price}</span>
-                    <span className="van-price-suffix">/day</span>
+                <div className="van-details">
+                    <div className="van-details-left">
+                        <h3 className="van-name">{name}</h3>
+                        <span
+                            className={vanTypeClasses}
+                        >
+                            {type}
+                        </span>
+                    </div>
+                    <div className="van-details-right">
+                        <span className="van-price">${price}</span>
+                        <span className="van-price-suffix">/day</span>
+                    </div>
                 </div>
-            </div>
+            </Link>
         </div>
     )
 }
