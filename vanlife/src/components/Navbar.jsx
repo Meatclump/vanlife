@@ -5,7 +5,7 @@ export default function Navbar() {
     return(
         <nav>
             <div className='page-title'>
-                <h1><Link to='/'>#VanLife</Link></h1>
+                <h2><Link to='/'>#VanLife</Link></h2>
             </div>
             <div className='nav-items'>
                 <Link to='/about'>About</Link>
