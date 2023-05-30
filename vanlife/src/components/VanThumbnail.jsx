@@ -10,7 +10,7 @@ export default function Van(props) {
     
     return (
         <div className="van-thumbnails">
-            <Link to={id}>
+            <Link to={`/vans/${id}`}>
                 <div className="van-image-container">
                     <img src={imageUrl} alt={name} />
                 </div>

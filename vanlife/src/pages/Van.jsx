@@ -1,17 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export default function Van() {
     const [van, setVan] = React.useState([])
     const [vanTypeClassName, setVanTypeClassName] = React.useState('')
+    const params = useParams()
 
 
     // Get the van data from the server
     React.useEffect(() => {
         fetch('/api/vans')
         .then(response => response.json())
-        .then(data => setVan(data.vans[0]))
-    }, [])
+        .then(data => setVan(data.vans[params.id]))
+    }, [params.id])
 
     // Set the class name styles dynamically
     React.useEffect(() => {
