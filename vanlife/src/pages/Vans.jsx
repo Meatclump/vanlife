@@ -2,7 +2,7 @@ import React from 'react'
 import Van from '../components/VanThumbnail'
 
 export default function Vans() {
-    const [vanArray, setVanArray] = React.useState([])
+    const [vanArray, setVanArray] = React.useState(null)
     const [vanElements, setVanElements] = React.useState(vanArray)
     const [types, setTypes] = React.useState([])
     const [typeSelectors, setTypeSelectors] = React.useState('')
@@ -18,25 +18,29 @@ export default function Vans() {
     // Set the vanElements when our van array updates
     // Set the types when the van array updates
     React.useEffect(() => {
-        setVanElements(vanArray.map(van => <Van key={van.id} vanData={van} />))
-        let uniqueTypes = []
-        vanArray.forEach(item => {
-            if (!uniqueTypes.includes(item.type)) {
-                uniqueTypes.push(item.type)
-            }
-        })
-        setTypes(uniqueTypes)
+        if (vanArray) {
+            setVanElements(vanArray.map(van => <Van key={van.id} vanData={van} />))
+            let uniqueTypes = []
+            vanArray.forEach(item => {
+                if (!uniqueTypes.includes(item.type)) {
+                    uniqueTypes.push(item.type)
+                }
+            })
+            setTypes(uniqueTypes)
+        }
     }, [vanArray, selectedType])
 
     // Update the vanElements when a van type is selected
     React.useEffect(() => {
-        setVanElements(vanArray.map(van => {
-            if (van.type === selectedType && selectedType !== '') {
-                return <Van key={van.id} vanData={van} />
-            } else if (selectedType === '') {
-                return <Van key={van.id} vanData={van} />
-            }
-        }))
+        if (vanArray) {
+            setVanElements(vanArray.map(van => {
+                if (van.type === selectedType && selectedType !== '') {
+                    return <Van key={van.id} vanData={van} />
+                } else if (selectedType === '') {
+                    return <Van key={van.id} vanData={van} />
+                }
+            }))
+        }
     }, [selectedType])
 
     // Set the available typeSelectors when the van types array updates
@@ -58,16 +62,18 @@ export default function Vans() {
 
     return (
         <main className="van-container">
-            <h1>Explore our van options</h1>
-            <p className='van-selector-description'>
-                Click to select a filter, or click again to de-select it and show all.
-            </p>
-            <div className='van-type-selector-container'>
-                {typeSelectors}
-            </div>
-            <div className='van-grid'>
-                {vanElements}
-            </div>
+            { vanArray ? <>
+                <h1>Explore our van options</h1>
+                <p className='van-selector-description'>
+                    Click to select a filter, or click again to de-select it and show all.
+                </p>
+                <div className='van-type-selector-container'>
+                    {typeSelectors}
+                </div>
+                <div className='van-grid'>
+                    {vanElements}
+                </div>
+            </> : <h2>Loading...</h2>}
         </main>
     )
 }
